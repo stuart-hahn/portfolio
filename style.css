@@ -8,3 +8,46 @@ body {
   font-family: "Times New Roman", Times, serif;
   line-height: 1.6;
 }
+
+h1 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sections */
+
+section {
+  padding: 60px 20px;
+}
+
+section h2,
+section p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  padding: 60px 20px;
+}
+
+footer p {
+  flex-shrink: 0;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+}
+
+footer ul li {
+  margin: 0 15px;
+}
+
+footer ul a {
+  text-decoration: none;
+}

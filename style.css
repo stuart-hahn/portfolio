@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,25 +10,73 @@ body {
   line-height: 1.6;
 }
 
-h1 {
-  max-width: 600px;
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 auto;
+  max-width: 600px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem; /* 48px */
+}
+
+h2 {
+  font-size: 2.4rem; /* 38.4px */
+}
+
+h3 {
+  font-size: 1.8rem; /* 28.8px */
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h5 {
+  font-size: 1.2rem; /* 19.2px */
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+}
+
+p,
+li {
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
 }
 
 /* Sections */
-
 section {
   padding: 60px 20px;
 }
 
 section h2,
-section p {
+section p,
+section ul {
   max-width: 600px;
   margin: 20px auto;
 }
 
-/* Footer */
+/* Skills Section */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+#skills li {
+  flex: 1 0 28%;
+  margin: 15px;
+}
+
+/* Footer */
 footer {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -42,6 +91,7 @@ footer p {
 footer ul {
   display: flex;
   list-style: none;
+  padding-left: 0; /* Removes default padding from ul */
 }
 
 footer ul li {

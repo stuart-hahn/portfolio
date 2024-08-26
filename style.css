@@ -6,11 +6,15 @@
 }
 
 html {
-  font-size: 18px; /* Set the base font size here */
+  font-size: 20px; /* Set the base font size here */
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif, system-ui, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  /* font-family: "Times New Roman", Times, serif; */
   line-height: 1.6;
   font-size: 1rem; /* Use rem units, relative to the base size */
 }

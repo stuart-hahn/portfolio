@@ -10,7 +10,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Typography */
@@ -19,7 +19,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
-  font-size: 1rem; /* 20px base size */
+  font-size: 1rem; /* 18px base size */
   background-color: #f2f4f2;
   -webkit-font-smoothing: antialiased;
 }

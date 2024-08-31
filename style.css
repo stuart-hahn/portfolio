@@ -1,28 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
-/* Global Styles */
-* {
+
+/* Global Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
-  font-size: 20px; /* Set the base font size here */
-}
-
-body {
-  font-family: "EB Garamond", serif, "Times New Roman", Times, system-ui,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  line-height: 1.6;
-  font-size: 1rem; /* Use rem units, relative to the base size */
+  font-size: 20px;
 }
 
 /* Typography */
+body {
+  font-family: "EB Garamond", "Times New Roman", Times, serif, system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.6;
+  font-size: 1rem; /* 20px base size */
+  background-color: #f2f4f2;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
 h1,
 h2,
 h3,
@@ -66,15 +68,80 @@ li {
   line-height: 1.6;
 }
 
+/* Media Defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form Defaults */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Prevent Text Overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Root Stacking Context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Shadows */
+:root {
+  --shadow-color: 120deg 3% 60%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
 /* Images */
 img {
+  will-change: transform, box-shadow;
   width: 100%;
   max-width: 800px;
   height: auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-elevation-medium);
   border-radius: 10px;
+  transition: transform 250ms ease, box-shadow 250ms ease 50ms,
+    rotate 250ms ease;
 }
 
+img:hover {
+  box-shadow: var(--shadow-elevation-high);
+  transform: scale(1.01);
+  rotate: -1deg;
+}
+
+/* Layout Containers */
 .img-container {
   display: flex;
   justify-content: center;

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
-/* Global Reset and Base Styles */
+/* Global Reset */
 *,
 *::before,
 *::after {
@@ -18,13 +18,12 @@ body {
   font-family: "EB Garamond", "Times New Roman", Times, serif, system-ui;
   font-optical-sizing: auto;
   font-style: normal;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 1rem; /* 18px base size */
   background-color: #f2f4f2;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Headings */
 h1,
 h2,
 h3,
@@ -37,38 +36,38 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem; /* 54px */
+  font-size: 2.5rem;
   padding: 60px 0;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 2.25rem; /* 40.5px */
+  font-size: 2.25rem;
 }
 
 h3 {
-  font-size: 1.75rem; /* 31.5px */
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5rem; /* 27px */
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.25rem; /* 22.5px */
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1rem; /* 18px */
+  font-size: 1rem;
 }
 
 p,
 li {
-  font-size: 1rem; /* 18px */
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Media Defaults */
+/* Media & Form Defaults */
 img,
 picture,
 video,
@@ -78,7 +77,6 @@ svg {
   max-width: 100%;
 }
 
-/* Form Defaults */
 input,
 button,
 textarea,
@@ -86,7 +84,6 @@ select {
   font: inherit;
 }
 
-/* Prevent Text Overflow */
 p,
 h1,
 h2,
@@ -97,13 +94,13 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Root Stacking Context */
+/* Layout */
 #root,
 #__next {
   isolation: isolate;
 }
 
-/* Shadows */
+/* Shadow Variables */
 :root {
   --shadow-color: 120deg 3% 60%;
   --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
@@ -123,7 +120,7 @@ h6 {
     25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
-/* Images */
+/* Image Styles */
 img {
   will-change: transform, box-shadow;
   width: 100%;
@@ -138,7 +135,7 @@ img {
 img:hover {
   box-shadow: var(--shadow-elevation-high);
   transform: scale(1.01);
-  rotate: -1deg;
+  rotate: -0.3deg;
 }
 
 /* Layout Containers */
@@ -147,7 +144,7 @@ img:hover {
   justify-content: center;
 }
 
-/* Sections */
+/* Section Layout */
 section {
   padding: 20px;
 }
@@ -186,7 +183,7 @@ footer p {
 footer ul {
   display: flex;
   list-style: none;
-  padding-left: 0; /* Removes default padding from ul */
+  padding-left: 0;
 }
 
 footer ul li {

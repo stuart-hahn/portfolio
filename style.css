@@ -35,10 +35,14 @@ h6 {
   font-weight: normal;
 }
 
+h1,
+h2 {
+  line-height: 1.2;
+}
+
 h1 {
   font-size: 2.5rem;
   padding: 60px 0;
-  line-height: 1.2;
 }
 
 h2 {
@@ -128,8 +132,7 @@ img {
   height: auto;
   box-shadow: var(--shadow-elevation-medium);
   border-radius: 10px;
-  transition: transform 250ms ease, box-shadow 250ms ease 50ms,
-    rotate 250ms ease;
+  transition: transform 300ms ease, box-shadow 300ms ease, rotate 300ms ease;
 }
 
 img:hover {

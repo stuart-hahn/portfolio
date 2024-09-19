@@ -33,6 +33,7 @@ h6 {
   margin: 0 auto;
   max-width: 600px;
   font-weight: normal;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -71,6 +72,16 @@ li {
   line-height: 1.6;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
 /* Media & Form Defaults */
 img,
 picture,
@@ -86,16 +97,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
 }
 
 /* Layout */
@@ -132,13 +133,12 @@ img {
   height: auto;
   box-shadow: var(--shadow-elevation-medium);
   border-radius: 10px;
-  transition: transform 300ms ease, box-shadow 300ms ease, rotate 300ms ease;
+  transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
 img:hover {
   box-shadow: var(--shadow-elevation-high);
-  transform: scale(1.01);
-  rotate: -0.3deg;
+  transform: scale(1.01) rotate(-0.3deg);
 }
 
 /* Layout Containers */
@@ -195,4 +195,40 @@ footer ul li {
 
 footer ul a {
   text-decoration: none;
+}
+
+/* Tech Section */
+.tech {
+  padding: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.tech-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  width: 250px;
+  height: 250px;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.tech-card img {
+  max-width: 100px;
+  box-shadow: none;
+}
+
+.tech-card:hover {
+  transform: scale(1.01);
+  box-shadow: var(--shadow-elevation-high);
 }
